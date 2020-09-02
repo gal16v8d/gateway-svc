@@ -32,4 +32,5 @@ This svc uses eureka server for communicate to other services, so assuming that 
 and also fx-user-app running, then you can see this service working:
 
 http://localhost:8762/fx-user-app/users/
+If mapped in zuul routes (application.properties) then it changes by the configured path.
 
