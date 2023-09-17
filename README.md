@@ -1,36 +1,27 @@
 # Getting Started
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### Pre-requisites
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/maven-plugin/)
+* Maven 3
+* Java 17
 
-### Guides
-The following guides illustrate how to use some features concretely:
+### Docker Image
 
-* [Routing and Filtering](https://spring.io/guides/gs/routing-and-filtering/)
+- In the project dir, build using the command:
 
-# Spring Cloud Netflix Maintenance Mode
+```bash
+docker build -t gsdd-gateway-svc .
+```
 
-The dependencies listed below are in maintenance mode. We do not recommend adding them to
-new projects:
+- Run the docker image as:
 
-*  Zuul
-
-The decision to move most of the Spring Cloud Netflix projects to maintenance mode was
-a response to Netflix not continuing maintenance of many of the libraries that we provided
-support for.
-
-Please see [this blog entry](https://spring.io/blog/2018/12/12/spring-cloud-greenwich-rc1-available-now#spring-cloud-netflix-projects-entering-maintenance-mode)
-for more information on maintenance mode and a list of suggested replacements for those
-libraries.
+```bash
+docker run -d -p 8762:8762 gsdd-gateway-svc
+```
 
 ### Notes
 
-This svc uses eureka server for communicate to other services, so assuming that we have eureka server running
-and also dw2-svc running, then you can see this service working:
+This service uses [eureka-server](https://github.com/gal16v8d/eureka-server) for communicate to other services, so assuming that we have eureka-server running
+and also [fx-course-app](https://github.com/gal16v8d/fx-course-app) running, then you can see this service working:
 
-http://localhost:8762/dw2-svc/attacks/
-If mapped in zuul routes (application.properties) then it changes by the configured path.
-
+- http://localhost:8762/courses/
