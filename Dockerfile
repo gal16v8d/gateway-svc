@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:21
 
 # Set the working directory inside the container
 WORKDIR /app

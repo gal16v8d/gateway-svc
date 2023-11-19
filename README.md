@@ -3,7 +3,7 @@
 ### Pre-requisites
 
 * Maven 3
-* Java 17
+* Java 21
 
 ### Docker Image
 

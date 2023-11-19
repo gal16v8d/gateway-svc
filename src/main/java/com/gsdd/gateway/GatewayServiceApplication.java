@@ -21,7 +21,7 @@ public class GatewayServiceApplication {
   private static final String APP_PREFIX = "-app";
 
   @Autowired
-  RouteDefinitionLocator locator;
+  private RouteDefinitionLocator locator;
 
   public static void main(String[] args) {
     SpringApplication.run(GatewayServiceApplication.class, args);
