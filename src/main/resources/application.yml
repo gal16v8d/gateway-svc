@@ -16,6 +16,8 @@ spring:
   application:
     name: gateway-service
   cloud:
+    compatibility-verifier:
+      enabled: false
     gateway:
       discovery:
         locator:
